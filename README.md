@@ -2,7 +2,7 @@
 
 This repository provides the files for the Jane Street ASIC reverse-engineering puzzle! See the [blog post](https://blog.janestreet.com/can-you-reverse-engineer-an-asic/) for more details. Once you figure it out, submit your answer [here](https://docs.google.com/forms/d/e/1FAIpQLScNCnfZ1wC4HbARwynUZ25EKZyqJIzXM_5H5aHom-QeAhE6FA/viewform) along with a brief description of how you did it. Submissions close on **September 4th, 2026.**
 
-![Event Countdown](<img src="http://s.mmgo.io/t/DH08"/>)
+![Event Countdown](http://s.mmgo.io/t/DH08)
 
 ### Puzzle GDS
 
