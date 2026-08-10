@@ -32,6 +32,36 @@ def print_hierarchy(cell, layout, depth=0, max_depth=5):
                 max_depth
             )
 
+def print_cell_tree(cell, depth=0, visited=None):
+    if visited is None:
+        visited = set()
+
+    indent = "    " * depth
+
+    print(
+        f"{indent}└─ {cell.name}"
+        f"  bbox={cell.bbox()}"
+        f"  instances={cell.child_instances()}"
+    )
+
+    if cell.cell_index() in visited:
+        print(f"{indent}   [already visited]")
+        return
+
+    visited.add(cell.cell_index())
+
+    for inst in cell.each_inst():
+        child = inst.cell
+
+        print(
+            f"{indent}   ↳ {child.name}"
+            f"  trans={inst.trans}"
+            f"  bbox={inst.bbox()}"
+        )
+
+        if child.child_instances() > 0:
+            print_cell_tree(child, depth + 1, visited)
+
 # ============================================================
 # Configuration
 # ============================================================
